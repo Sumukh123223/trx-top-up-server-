@@ -11,11 +11,7 @@ const PORT = process.env.PORT || 3000;
 // Security middleware
 app.use(helmet());
 app.use(cors({
-    origin: [
-        'https://208606ac73dc.ngrok-free.app',
-        'https://your-frontend-domain.com',
-        'http://localhost:3000'
-    ],
+    origin: true, // Allow all origins
     credentials: true
 }));
 
